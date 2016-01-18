@@ -14,5 +14,30 @@
       "core-js": "npm:core-js@^1.1.4",
       "redux-devtools": "npm:redux-devtools@^3.0.1"
     }
-  }
+  },
+  "name": "bike-shop",
+  "description": "React + Redux bike shop example using jspm and System.js.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "jspm-server": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-google": "^0.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "./node_modules/.bin/eslint *.js app/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiolkaf/bike-shop.git"
+  },
+  "author": "Filip Fiolka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fiolkaf/bike-shop/issues"
+  },
+  "homepage": "https://github.com/fiolkaf/bike-shop#readme"
 }

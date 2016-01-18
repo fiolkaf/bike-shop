@@ -27,18 +27,18 @@ class App extends React.Component {
     render() {
         const { activeModule } = this.props;
         return <div className="app">
-                    <Navbar>
-                        <Navbar.Header>
-                            <Navbar.Brand>
-                                <a href="#">Bike</a>
-                            </Navbar.Brand>
-                        </Navbar.Header>
-                        <Nav bsStyle="tabs" onSelect={ev => this.handleSelect(ev)}>
-                            <NavItem active={activeModule === 'repairs'} eventKey="repairs" title="Repais">Repairs</NavItem>
-                            <NavItem active={activeModule === 'stock'} eventKey="stock" title="Stock">Stock</NavItem>
-                        </Nav>
-                    </Navbar>
-                    <div></div>
+                <Navbar>
+                    <Navbar.Header>
+                        <Navbar.Brand>
+                            <a href="#">Bike</a>
+                        </Navbar.Brand>
+                    </Navbar.Header>
+                    <Nav bsStyle="tabs" onSelect={ev => this.handleSelect(ev)}>
+                        <NavItem active={activeModule === 'repairs'} eventKey="repairs" title="Repais">Repairs</NavItem>
+                        <NavItem active={activeModule === 'stock'} eventKey="stock" title="Stock">Stock</NavItem>
+                    </Nav>
+                </Navbar>
+                <div></div>
             </div>;
     }
 };
