@@ -1,12 +1,12 @@
 import React from 'react';
 
-export default class Stock extends React.Component {
+export default class Main extends React.Component {
     constructor(props) {
         super(props);
     }
 
     render() {
-        return <div>Stock</div>;
+        return <div>Main</div>;
     }
 };
 

@@ -6,8 +6,8 @@ export default class Repairs extends React.Component {
     }
 
     render() {
-        return <div>Repairs sss</div>;
+        return <div>Repairs</div>;
     }
-}
+};
 
 export let __hotReload = true;

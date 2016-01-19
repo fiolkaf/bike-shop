@@ -1,17 +1,17 @@
 import React from 'react';
 import { PropTypes } from 'react';
-import Stock from './modules/stock/index.js';
-import Repairs from './modules/repairs/index.js';
-import Nav from 'react-bootstrap/lib/Nav';
-import Navbar from 'react-bootstrap/lib/Navbar';
-import Row from 'react-bootstrap/lib/Row';
-import NavItem from 'react-bootstrap/lib/NavItem';
-import Grid from 'react-bootstrap/lib/Grid';
-
-import './app.scss!';
-
 import { connect } from 'react-redux';
 import { activateModule } from './actions';
+
+import * as Modules from './modules/index';
+
+import Row from 'react-bootstrap/lib/Row';
+import Nav from 'react-bootstrap/lib/Nav';
+import Grid from 'react-bootstrap/lib/Grid';
+import Navbar from 'react-bootstrap/lib/Navbar';
+import NavItem from 'react-bootstrap/lib/NavItem';
+
+import './app.scss!';
 
 class App extends React.Component {
 
@@ -26,6 +26,7 @@ class App extends React.Component {
 
     render() {
         const { activeModule } = this.props;
+        var Module = Modules[this.props.activeModule];
         return <div className="app">
                 <Navbar>
                     <Navbar.Header>
@@ -34,11 +35,12 @@ class App extends React.Component {
                         </Navbar.Brand>
                     </Navbar.Header>
                     <Nav bsStyle="tabs" onSelect={ev => this.handleSelect(ev)}>
-                        <NavItem active={activeModule === 'repairs'} eventKey="repairs" title="Repais">Repairs</NavItem>
-                        <NavItem active={activeModule === 'stock'} eventKey="stock" title="Stock">Stock</NavItem>
+                        <NavItem active={activeModule === 'Repairs'} eventKey="Repairs" title="Repars">Repairs</NavItem>
+                        <NavItem active={activeModule === 'Stock'} eventKey="Stock" title="Stock">Stock</NavItem>
                     </Nav>
                 </Navbar>
-                <div></div>
+                <Module>
+                </Module>
             </div>;
     }
 };

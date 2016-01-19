@@ -15,6 +15,7 @@ System.config({
   },
   trace: true,
   map: {
+    "modules": "app/modules/*/index.js",
     "babel": "npm:babel-core@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
     "core-js": "npm:core-js@1.2.6",

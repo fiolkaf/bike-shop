@@ -6,7 +6,7 @@ import App from './app/app.js';
 import appReducers from './app/reducers';
 
 let store = createStore(appReducers, {
-    activeModule: 'app'
+    activeModule: 'Main'
 });
 
 ReactDOM.render(
