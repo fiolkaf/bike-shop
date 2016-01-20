@@ -7,17 +7,17 @@ class Stock extends React.Component {
     }
 
     render() {
-        return <div>Stock</div>;
+        return <div>{this.props.text}</div>;
     }
 };
 
 Stock.propTypes = {
-//    text: React.PropTypes.string.isRequired
+    text: React.PropTypes.string.isRequired
 };
 
 function select(state) {
     return {
-        text: state.text
+        text: state.stock.text
     }
 }
 

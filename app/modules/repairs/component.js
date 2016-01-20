@@ -7,17 +7,17 @@ class Repairs extends React.Component {
     }
 
     render() {
-        return <div>Repairs</div>;
+        return <div>{this.props.text}</div>;
     }
 };
 
 Repairs.propTypes = {
-//    text: React.PropTypes.string.isRequired
+    text: React.PropTypes.string.isRequired
 };
 
 function select(state) {
     return {
-        text: state.text
+        text: state.repairs.text
     }
 }
 

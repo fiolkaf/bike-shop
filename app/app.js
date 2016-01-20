@@ -1,5 +1,4 @@
 import React from 'react';
-import { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { activateModule } from './actions';
 
@@ -22,7 +21,7 @@ class App extends React.Component {
 
     render() {
         const { activeModule } = this.props;
-        let Module = Modules[this.props.activeModule].component;
+        let Module = Modules[activeModule].component;
         return <div className="app">
                 <Navbar>
                     <Nav bsStyle="tabs" onSelect={ev => this.handleSelect(ev)}>
@@ -38,12 +37,15 @@ class App extends React.Component {
 };
 
 App.propTypes = {
-    activeModule: PropTypes.string.isRequired
+    activeModule: React.PropTypes.string.isRequired
 };
 
 function select(state) {
     return {
-        activeModule: state.activeModule
+        activeModule: state.activeModule,
+        main: {text: state.main.text},
+        repairs: {text: state.repairs.text},
+        stock: {text: state.stock.text},
     }
 }
 

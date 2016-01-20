@@ -7,17 +7,17 @@ class Main extends React.Component {
     }
 
     render() {
-        return <div>Main</div>;
+        return <div>{this.props.text}</div>;
     }
 };
 
 Main.propTypes = {
-//    text: React.PropTypes.string.isRequired
+    text: React.PropTypes.string.isRequired
 };
 
 function select(state) {
     return {
-        text: state.text
+        text: state.main.text
     }
 }
 
