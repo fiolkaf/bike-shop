@@ -29,18 +29,14 @@ class App extends React.Component {
         var Module = Modules[this.props.activeModule];
         return <div className="app">
                 <Navbar>
-                    <Navbar.Header>
-                        <Navbar.Brand>
-                            <a href="#">Bike</a>
-                        </Navbar.Brand>
-                    </Navbar.Header>
                     <Nav bsStyle="tabs" onSelect={ev => this.handleSelect(ev)}>
-                        <NavItem active={activeModule === 'Repairs'} eventKey="Repairs" title="Repars">Repairs</NavItem>
-                        <NavItem active={activeModule === 'Stock'} eventKey="Stock" title="Stock">Stock</NavItem>
+                        { Object.keys(Modules).map(name => (
+                            <NavItem active={activeModule === name} eventKey={name} title={name}>{Modules[name].title}</NavItem>
+                          ))
+                        }
                     </Nav>
                 </Navbar>
-                <Module>
-                </Module>
+                <Module/>
             </div>;
     }
 };

@@ -10,4 +10,6 @@ export default class Repairs extends React.Component {
     }
 };
 
+Repairs.title = 'Repairs';
+
 export let __hotReload = true;

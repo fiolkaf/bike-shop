@@ -10,4 +10,6 @@ export default class Main extends React.Component {
     }
 };
 
+Main.title = 'Bike shop';
+
 export let __hotReload = true;

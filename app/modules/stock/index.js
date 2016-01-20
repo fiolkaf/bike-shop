@@ -10,4 +10,6 @@ export default class Stock extends React.Component {
     }
 };
 
+Stock.title = 'Stock';
+
 export let __hotReload = true;
