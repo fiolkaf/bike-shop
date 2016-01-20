@@ -5,11 +5,7 @@ import { activateModule } from './actions';
 
 import * as Modules from './modules/index';
 
-import Row from 'react-bootstrap/lib/Row';
-import Nav from 'react-bootstrap/lib/Nav';
-import Grid from 'react-bootstrap/lib/Grid';
-import Navbar from 'react-bootstrap/lib/Navbar';
-import NavItem from 'react-bootstrap/lib/NavItem';
+import { Row, Nav, Grid, Navbar, NavItem } from 'react-bootstrap';
 
 import './app.scss!';
 
@@ -26,12 +22,12 @@ class App extends React.Component {
 
     render() {
         const { activeModule } = this.props;
-        var Module = Modules[this.props.activeModule];
+        let Module = Modules[this.props.activeModule].component;
         return <div className="app">
                 <Navbar>
                     <Nav bsStyle="tabs" onSelect={ev => this.handleSelect(ev)}>
                         { Object.keys(Modules).map(name => (
-                            <NavItem active={activeModule === name} eventKey={name} title={name}>{Modules[name].title}</NavItem>
+                            <NavItem key={name} active={activeModule === name} eventKey={name} title={name}>{Modules[name].title}</NavItem>
                           ))
                         }
                     </Nav>

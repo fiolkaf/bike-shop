@@ -1,15 +1,10 @@
-import React from 'react';
+import Component from './component';
+import Reducers from './reducers';
 
-export default class Stock extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return <div>Stock</div>;
-    }
+export default {
+    title: 'Stock',
+    component: Component,
+    reducers: Reducers
 };
-
-Stock.title = 'Stock';
 
 export let __hotReload = true;

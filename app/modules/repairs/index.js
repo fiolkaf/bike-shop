@@ -1,15 +1,10 @@
-import React from 'react';
+import Component from './component';
+import Reducers from './reducers';
 
-export default class Repairs extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return <div>Repairs</div>;
-    }
+export default {
+    title: 'Reducers',
+    component: Component,
+    reducers: Reducers
 };
-
-Repairs.title = 'Repairs';
 
 export let __hotReload = true;
