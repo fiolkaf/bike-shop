@@ -15,12 +15,6 @@ Main.propTypes = {
     text: React.PropTypes.string.isRequired
 };
 
-function select(state) {
-    return {
-        text: state.main.text
-    }
-}
-
-export default connect(select)(Main);
+export default Main;
 
 export let __hotReload = true;

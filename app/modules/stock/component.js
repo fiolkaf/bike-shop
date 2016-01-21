@@ -15,12 +15,6 @@ Stock.propTypes = {
     text: React.PropTypes.string.isRequired
 };
 
-function select(state) {
-    return {
-        text: state.stock.text
-    }
-}
-
-export default connect(select)(Stock);
+export default Stock;
 
 export let __hotReload = true;

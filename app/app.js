@@ -40,14 +40,13 @@ App.propTypes = {
     activeModule: React.PropTypes.string.isRequired
 };
 
-function select(state) {
-    return {
-        activeModule: state.activeModule,
-        main: {text: state.main.text},
-        repairs: {text: state.repairs.text},
-        stock: {text: state.stock.text},
-    }
-}
+export let select = state => {
+    var composedSelect = Object.assign({}, {activeModule: state.activeModule});
+    Object.keys(Modules).forEach(name => {
+        composedSelect[name] = Modules[name].select(state[name]);
+    });
+    return composedSelect;
+};
 
 export let __hotReload = true;
 

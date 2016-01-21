@@ -1,10 +1,17 @@
-import Component from './component';
-import Reducers from './reducers';
+import component from './component';
+import reducers from './reducers';
+import { connect } from 'react-redux';
+
+let select = state => {
+    return { text: state.text };
+};
 
 export default {
     title: 'Stock',
-    component: Component,
-    reducers: Reducers
+    component: connect(select)(component),
+    reducers,
+    select,
+    initialState: { text: 'Stock' }
 };
 
 export let __hotReload = true;

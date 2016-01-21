@@ -7,9 +7,9 @@ import appReducers from './app/reducers';
 
 let store = createStore(appReducers, {
     activeModule: 'Main',
-    main: { text: 'main'},
-    repairs: { text: 'repairs'},
-    stock: { text: 'stock'},
+    Main: { text: 'main'},
+    Repairs: { text: 'repairs'},
+    Stock: { text: 'stock'},
 });
 
 ReactDOM.render(

@@ -15,12 +15,6 @@ Repairs.propTypes = {
     text: React.PropTypes.string.isRequired
 };
 
-function select(state) {
-    return {
-        text: state.repairs.text
-    }
-}
-
-export default connect(select)(Repairs);
+export default Repairs;
 
 export let __hotReload = true;
