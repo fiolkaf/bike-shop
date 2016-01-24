@@ -8,7 +8,7 @@ let select = state => {
 
 export default {
     title: 'Stock',
-    component: connect(select)(component),
+    component: component,
     reducers,
     select,
     initialState: { text: 'Stock' }

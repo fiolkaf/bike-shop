@@ -31,7 +31,7 @@ class App extends React.Component {
                         }
                     </Nav>
                 </Navbar>
-                <Module/>
+                <Module {...this.props[activeModule]} />
             </div>;
     }
 };

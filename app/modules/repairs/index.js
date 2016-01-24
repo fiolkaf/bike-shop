@@ -8,7 +8,7 @@ let select = state => {
 
 export default {
     title: 'Repairs',
-    component: connect(select)(component),
+    component: component,
     reducers,
     select,
     initialState: { text: 'Repairs' }
