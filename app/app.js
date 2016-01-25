@@ -6,6 +6,7 @@ import * as Modules from './modules/index';
 
 import { Row, Nav, Grid, Navbar, NavItem } from 'react-bootstrap';
 
+import './css/bootstrap.min.scss!';
 import './app.scss!';
 
 class App extends React.Component {
