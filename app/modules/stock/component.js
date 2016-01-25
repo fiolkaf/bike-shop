@@ -1,7 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
-class Stock extends React.Component {
+export default class Stock extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -14,7 +13,5 @@ class Stock extends React.Component {
 Stock.propTypes = {
     text: React.PropTypes.string.isRequired
 };
-
-export default Stock;
 
 export let __hotReload = true;

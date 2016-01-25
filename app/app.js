@@ -41,10 +41,10 @@ App.propTypes = {
     activeModule: React.PropTypes.string.isRequired
 };
 
-export let select = state => {
+let select = state => {
     var composedSelect = Object.assign({}, {activeModule: state.activeModule});
     Object.keys(Modules).forEach(name => {
-        composedSelect[name] = Modules[name].select(state[name]);
+        composedSelect[name] = state[name];
     });
     return composedSelect;
 };
