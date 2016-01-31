@@ -1,9 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { activateModule } from './actions';
-
 import * as Modules from './modules/index';
-
 import { Row, Nav, Grid, Navbar, NavItem } from 'react-bootstrap';
 
 import './css/bootstrap.min.scss!';
@@ -49,13 +47,11 @@ let select = state => {
     return composedSelect;
 };
 
-export let initialState = {
-    activeModule: 'Main'
-};
+export let initialState = {};
+initialState.activeModule = 'Main';
 Object.keys(Modules).forEach(name => {
     initialState[name] = Modules[name].initialState;
 });
-
 
 export let App = connect(select)(AppComponent);
 

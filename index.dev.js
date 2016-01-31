@@ -4,12 +4,20 @@ import { createStore, compose } from 'redux';
 import { Provider } from 'react-redux';
 import { App, initialState } from './app/app.js';
 import appReducers from './app/reducers';
+import DevTools from './dev-tools.js';
 
-let store = createStore(appReducers, initialState);
+const enhancer = compose(
+    DevTools.instrument()
+);
+
+let store = createStore(appReducers, initialState, enhancer);
 
 ReactDOM.render(
     <Provider store={store}>
-        <App></App>
+        <div>
+            <App></App>
+            <DevTools/>
+        </div>
     </Provider>,
     document.querySelector('.root')
 );
