@@ -1,3 +1,3 @@
 export default {
-    text: 'bike shop'
+    text: 'Bike shop'
 };

@@ -1,1 +1,3 @@
-export default { text: 'Stock' };
+export default {
+    text: 'Stock'
+};

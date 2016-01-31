@@ -9,7 +9,7 @@ import { Row, Nav, Grid, Navbar, NavItem } from 'react-bootstrap';
 import './css/bootstrap.min.scss!';
 import './app.scss!';
 
-class App extends React.Component {
+class AppComponent extends React.Component {
 
     constructor(props) {
         super(props);
@@ -35,9 +35,9 @@ class App extends React.Component {
                 <Module {...this.props[activeModule]} />
             </div>;
     }
-};
+}
 
-App.propTypes = {
+AppComponent.propTypes = {
     activeModule: React.PropTypes.string.isRequired
 };
 
@@ -49,6 +49,14 @@ let select = state => {
     return composedSelect;
 };
 
-export let __hotReload = true;
+export let initialState = {
+    activeModule: 'Main'
+};
+Object.keys(Modules).forEach(name => {
+    initialState[name] = Modules[name].initialState;
+});
 
-export default connect(select)(App);
+
+export let App = connect(select)(AppComponent);
+
+export let __hotReload = true;

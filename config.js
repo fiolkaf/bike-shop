@@ -15,16 +15,17 @@ System.config({
   },
   trace: true,
   map: {
-    "modules": "app/modules/*/index.js",
     "babel": "npm:babel-core@5.8.34",
-    "babel-runtime": "npm:babel-runtime@5.8.34",
+    "babel-runtime": "npm:babel-runtime@5.8.35",
     "core-js": "npm:core-js@1.2.6",
+    "modules": "app/modules/*/index.js",
     "react": "npm:react@0.14.6",
     "react-bootstrap": "npm:react-bootstrap@0.28.2",
     "react-dom": "npm:react-dom@0.14.6",
     "react-redux": "npm:react-redux@4.0.6",
-    "redux": "npm:redux@3.0.5",
+    "redux": "npm:redux@3.0.6",
     "redux-devtools": "npm:redux-devtools@3.0.1",
+    "redux-devtools-log-monitor": "npm:redux-devtools-log-monitor@1.0.2",
     "scss": "github:fiolkaf/plugin-sass@master",
     "github:fiolkaf/plugin-sass@master": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
@@ -41,9 +42,6 @@ System.config({
     },
     "github:jspm/nodelibs-crypto@0.1.0": {
       "crypto-browserify": "npm:crypto-browserify@3.11.0"
-    },
-    "github:jspm/nodelibs-domain@0.1.0": {
-      "domain-browser": "npm:domain-browser@1.1.7"
     },
     "github:jspm/nodelibs-events@0.1.1": {
       "events": "npm:events@1.0.2"
@@ -66,16 +64,6 @@ System.config({
     "github:jspm/nodelibs-vm@0.1.0": {
       "vm-browserify": "npm:vm-browserify@0.0.4"
     },
-    "npm:amdefine@1.0.0": {
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "module": "github:jspm/nodelibs-module@0.1.0",
-      "path": "github:jspm/nodelibs-path@0.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
-    "npm:asap@2.0.3": {
-      "domain": "github:jspm/nodelibs-domain@0.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
     "npm:asn1.js@4.3.0": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "bn.js": "npm:bn.js@4.6.4",
@@ -87,7 +75,7 @@ System.config({
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
     },
-    "npm:babel-runtime@5.8.34": {
+    "npm:babel-runtime@5.8.35": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:browserify-aes@1.0.5": {
@@ -211,9 +199,6 @@ System.config({
       "randombytes": "npm:randombytes@2.0.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:domain-browser@1.1.7": {
-      "events": "github:jspm/nodelibs-events@0.1.1"
-    },
     "npm:elliptic@6.0.2": {
       "bn.js": "npm:bn.js@4.6.4",
       "brorand": "npm:brorand@1.0.5",
@@ -221,27 +206,13 @@ System.config({
       "inherits": "npm:inherits@2.0.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:envify@3.4.0": {
-      "jstransform": "npm:jstransform@10.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "through": "npm:through@2.3.8"
-    },
-    "npm:esprima-fb@13001.1001.0-dev-harmony-fb": {
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
     "npm:evp_bytestokey@1.0.0": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "create-hash": "npm:create-hash@1.1.2",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0"
     },
     "npm:fbjs@0.6.1": {
-      "core-js": "npm:core-js@1.2.6",
-      "loose-envify": "npm:loose-envify@1.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "promise": "npm:promise@7.1.1",
-      "ua-parser-js": "npm:ua-parser-js@0.7.10",
-      "whatwg-fetch": "npm:whatwg-fetch@0.9.0"
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:hash.js@1.0.3": {
       "inherits": "npm:inherits@2.0.1"
@@ -252,14 +223,6 @@ System.config({
     "npm:invariant@2.2.0": {
       "loose-envify": "npm:loose-envify@1.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
-    },
-    "npm:jstransform@10.1.0": {
-      "base62": "npm:base62@0.1.1",
-      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
-      "esprima-fb": "npm:esprima-fb@13001.1001.0-dev-harmony-fb",
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "source-map": "npm:source-map@0.1.31"
     },
     "npm:lodash-compat@3.10.1": {
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -301,10 +264,6 @@ System.config({
     "npm:process@0.11.2": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"
     },
-    "npm:promise@7.1.1": {
-      "asap": "npm:asap@2.0.3",
-      "fs": "github:jspm/nodelibs-fs@0.1.2"
-    },
     "npm:public-encrypt@4.0.0": {
       "bn.js": "npm:bn.js@4.6.4",
       "browserify-rsa": "npm:browserify-rsa@4.0.0",
@@ -320,7 +279,7 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:react-bootstrap@0.28.2": {
-      "babel-runtime": "npm:babel-runtime@5.8.34",
+      "babel-runtime": "npm:babel-runtime@5.8.35",
       "classnames": "npm:classnames@2.2.3",
       "dom-helpers": "npm:dom-helpers@2.4.0",
       "invariant": "npm:invariant@2.2.0",
@@ -336,6 +295,15 @@ System.config({
     },
     "npm:react-dom@0.14.6": {
       "react": "npm:react@0.14.6"
+    },
+    "npm:react-json-tree@0.3.0": {
+      "babel-runtime": "npm:babel-runtime@5.8.35",
+      "react": "npm:react@0.14.6",
+      "react-mixin": "npm:react-mixin@1.7.0"
+    },
+    "npm:react-mixin@1.7.0": {
+      "object-assign": "npm:object-assign@2.1.1",
+      "smart-mixin": "npm:smart-mixin@1.2.1"
     },
     "npm:react-overlays@0.5.4": {
       "classnames": "npm:classnames@2.2.3",
@@ -356,10 +324,9 @@ System.config({
       "invariant": "npm:invariant@2.2.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "react": "npm:react@0.14.6",
-      "redux": "npm:redux@3.0.5"
+      "redux": "npm:redux@3.0.6"
     },
     "npm:react@0.14.6": {
-      "envify": "npm:envify@3.4.0",
       "fbjs": "npm:fbjs@0.6.1",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
@@ -373,13 +340,23 @@ System.config({
       "stream-browserify": "npm:stream-browserify@1.0.0",
       "string_decoder": "npm:string_decoder@0.10.31"
     },
+    "npm:redux-devtools-log-monitor@1.0.2": {
+      "react": "npm:react@0.14.6",
+      "react-json-tree": "npm:react-json-tree@0.3.0",
+      "react-pure-render": "npm:react-pure-render@1.0.2",
+      "redux-devtools": "npm:redux-devtools@3.0.1",
+      "redux-devtools-themes": "npm:redux-devtools-themes@1.0.0"
+    },
+    "npm:redux-devtools-themes@1.0.0": {
+      "base16": "npm:base16@1.0.0"
+    },
     "npm:redux-devtools@3.0.1": {
       "lodash": "npm:lodash@3.10.1",
       "react": "npm:react@0.14.6",
       "react-redux": "npm:react-redux@4.0.6",
-      "redux": "npm:redux@3.0.5"
+      "redux": "npm:redux@3.0.6"
     },
-    "npm:redux@3.0.5": {
+    "npm:redux@3.0.6": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:ripemd160@1.0.1": {
@@ -399,12 +376,6 @@ System.config({
       "inherits": "npm:inherits@2.0.1",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:source-map@0.1.31": {
-      "amdefine": "npm:amdefine@1.0.0",
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "path": "github:jspm/nodelibs-path@0.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2"
-    },
     "npm:stream-browserify@1.0.0": {
       "events": "github:jspm/nodelibs-events@0.1.1",
       "inherits": "npm:inherits@2.0.1",
@@ -412,13 +383,6 @@ System.config({
     },
     "npm:string_decoder@0.10.31": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
-    },
-    "npm:through@2.3.8": {
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "stream": "github:jspm/nodelibs-stream@0.1.0"
-    },
-    "npm:ua-parser-js@0.7.10": {
-      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
     "npm:uncontrollable@3.2.1": {
       "invariant": "npm:invariant@2.2.0",

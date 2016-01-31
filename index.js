@@ -2,15 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import App from './app/app.js';
+import { App, initialState } from './app/app.js';
 import appReducers from './app/reducers';
 
-let store = createStore(appReducers, {
-    activeModule: 'Main',
-    Main: { text: 'main'},
-    Repairs: { text: 'repairs'},
-    Stock: { text: 'stock'},
-});
+let store = createStore(appReducers, initialState);
 
 ReactDOM.render(
     <Provider store={store}>
